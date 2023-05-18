@@ -1,0 +1,369 @@
+{
+    "intents": [
+         {
+              "tag": "chào hỏi",
+              "patterns": [
+                   "Chào bạn",
+                   "Hello",
+                   "Xin chào",
+                   "Hi",
+                   "Chào em",
+                   "Chào cậu",
+                   "Chào Chatbot"
+              ],
+              "responses": [
+                   "Xin chào bạn, mình tên là FoodChatBot. Mình rất vui khi có thể tư vấn cho bạn."
+              ],
+              "context": [
+                   ""
+              ]
+         },
+         {
+              "tag": "Hỏi tên",
+              "patterns": [
+                   "Bạn tên gì?"
+              ],
+              "responses": [
+                   "Mình tên là FoodChatBot. Mình rất vui khi có thể tư vấn cho bạn. Còn bạn tên gì?"
+              ],
+              "context": [
+                   ""
+              ]
+         },
+         {
+              "tag": "chức năng",
+              "patterns": [
+                   "Bạn có thể làm được gì?",
+                   "Bạn có thể giúp gì cho tôi?",
+                   "Chatbot có thể làm gì?",
+                   "Bạn tư vấn được gì?"
+              ],
+              "responses": [
+                   "Mình có thể tư vấn cho bạn về món ăn và quán ăn ngon nếu bạn có nhu cầu đi ăn bên ngoài"
+              ],
+              "context": [
+                   ""
+              ]
+         },
+         {
+              "tag": "trời nóng",
+              "patterns": [
+                   "Trời nóng thì nên ăn gì?",
+                   "Tư vấn món ăn cho ngày nắng nóng?",
+                   "Trời nóng thì ăn gì ngon?"
+              ],
+              "responses": [
+                   "Bia hơi ",
+                   "Nộm lưỡi heo dọc mùng",
+                   "Bún nguội",
+                   "Bún ốc",
+                   "Bún diêu"
+              ],
+              "context": [
+                   ""
+              ]
+         },
+         {
+              "tag": "trời lạnh",
+              "patterns": [
+                   "Trời lạnh thì nên ăn gì?",
+                   "Tư vấn món ăn cho ngày nắng lạnh?",
+                   "Trời lạnh thì ăn gì ngon?"
+              ],
+              "responses": [
+                   "Trời lạnh nên ăn các món cay và nóng như: Lẩu bò, bún cá, thịt nướng,....."
+              ],
+              "context": [
+                   ""
+              ]
+         },
+         {
+              "tag": "hôm nay ăn gì?",
+              "patterns": [
+                   "Hôm nay mình nên ăn gì?",
+                   "Ăn gì hôm nay"
+              ],
+              "responses": [
+                   "Bạn có nên cho mình biết một số thông tin như thời tiết, nhu cầu của bạn để mình tư vấn chính xác hơn."
+              ],
+              "context": [
+                   ""
+              ]
+         },
+         {
+              "tag": "sáng ăn gì?",
+              "patterns": [
+                   "Mình nên ăn gì buổi sáng",
+                   "sáng nay ăn gì?"
+              ],
+              "responses": [
+                   "Buổi sáng nên ăn các món nước như: bún bò, phở gà, bún riêu, bánh mì,... sẽ giúp bạn tiêu hoá tốt hơn",
+                   "Bạn có thể bắt đầu bữa sáng với các món như: bánh ướt chả, bánh cuốn trứng, bánh mì ốp la, bánh Sandwich và một ly sữa sẽ rất tuyệt đấy.",
+                   "Bạn có thể ăn một hộp xôi gấc, xôi xéo, xôi bắp và 1 chai sữa đậu nành để có một buổi sáng nhiều năng lượng",
+                   "Bạn có thể uống một ly cà phê và ăn ít hoa quả nếu bạn không thấy quá đói",
+                   "Bạn có thể ăn các món súp như: súp cua trứng bắc thảo, súp gà,... và một ly nước cam sẽ rất tuyệt đấy"
+              ],
+              "context": [
+                   ""
+              ]
+         },
+         {
+              "tag": "Trưa, tối nay ăn gì?",
+              "patterns": [
+                   "Trưa nay mình nên ăn gì?",
+                   "Ăn gì vào trưa nay",
+                   "Trưa nay ăn gì thì ngon?",
+                   "Tối nay ăn gì?",
+                   "Ăn gì buổi tối?"
+              ],
+              "responses": [
+                   "Bạn có thể ăn các món như: Cơm sườn, cơm tấm, Cơm gà xối mỡ, cơm bò lúc lắc, cơm rang dưa bò, cơm trộn hàn quốc và một ly nước ép hoa quả sẽ rất ngon đấy.",
+                   "Bạn có thể ăn các món như: nồi lẩu, bữa thịt nướng,.......",
+                   "Bạn có thể ăn các món như: bún, cháo miến phở,......"
+              ],
+              "context": [
+                   ""
+              ]
+         },
+         {
+              "tag": "Bún",
+              "patterns": [
+                "Bạn biết quán bún nào ngon?",
+                "tôi muốn ăn bún hôm nay"
+              ],
+              "responses": [
+                   "Bún chả sẽ hợp với bạn vào hôm nay đó",
+                   "Bún mọc sẽ hợp với bạn vào hôm nay đó ",
+                   "Bún ốc sẽ hợp với bạn vào hôm nay đó",
+                   "Bún bò sẽ hợp với bạn vào hôm nay đó",
+                   "Bún ngan sẽ hợp với bạn vào hôm nay đó",
+                   "Bún vịt sẽ hợp với bạn vào hôm nay đó",
+                   "Bún diêu sẽ hợp với bạn vào hôm nay đó"
+              ],
+              "context": [
+                   ""
+              ]
+         },
+         {
+              "tag": "Cháo",
+              "patterns": [
+                   "Bạn biết quán cháo nào ngon?",
+                   "tôi muốn ăn cháo hôm nay"
+              ],
+              "responses": [
+                   "Cháo lòng sẽ ngon lắm đấy",
+                   "Cháo sườn sẽ ngon lắm đấy",
+                   "Cháo trai sẽ ngon lắm đấy"
+              ],
+              "context": [
+                   ""
+              ]
+         },
+         {
+              "tag": "Phở",
+              "patterns": [
+                   "hôm nay thèm phở quá",
+                   "Quán phở nào ngon nhỉ?"
+              ],
+              "responses": [
+                   "Phở gà vừa lạ vừa ngon",
+                   "Phở bò HN sẽ là 1 bữa ăn tuyệt vời cho trời lạnh",
+                   "Phở xào bạn thấy sao",
+                   "Phở cuốn sẽ rất hợp với trời nóng này đấy",
+                   "Phở trộn rất ok nên thử"
+              ],
+              "context": [
+                   ""
+              ]
+         },
+         {
+              "tag": "Miến",
+              "patterns": [
+                   "Tôi muốn ăn miến",
+                   "Có quán miến nào ngon không?"
+              ],
+              "responses": [
+                   "Miến lươn tuyệt vời",
+                   "Miến thịt heo vừa ngon vừa rẻ"
+              ],
+              "context": [
+                   ""
+              ]
+         },
+         {
+              "tag": "không biết ăn gì?",
+              "patterns": [
+                   "Mình không biết ăn gì?",
+                   "Hôm nay ăn gì ta?",
+                   "Ăn gì cũng được"
+              ],
+              "responses": [
+                   "món bún mọc là một gợi ý vô cùng tuyệt vời, vừa đảm bảo đầy đủ dinh dưỡng",
+                   "Bún bò Huế chắc chắn là một món ăn ngon, thích hợp để bạn thưởng thức khi chưa biết hôm nay ăn gì trong hôm nay",
+                   "Cháo lòng ngon lắm đấy",
+                   "PizzaCompany cho lạ nhé",
+                   "Bún thang vừa ngon vừa đơn giản"
+              ],
+              "context": [
+                   ""
+              ]
+         },
+         {
+              "tag": "Tráng miệng",
+              "patterns": [
+                   "Bạn có thể tư vấn các loại đồ ăn tráng miệng không?",
+                   "Các món tráng miệng ngon"
+              ],
+              "responses": [
+                   "Món chè trái cây ngõ tự do vừa mát vừa ngon",
+                   "Yaourt trái cây ngũ cốc ở bách khoa rất ngon đấy!",
+                   "Kem chuối trái cây sữa chua giúp thanh mát vào mùa hè",
+                   "Kem ở phố tràng tiền ngon lắm"
+              ],
+              "context": [
+                   ""
+              ]
+         },
+         {
+              "tag": "Các loại bánh",
+              "patterns": [
+                   "Mình muốn ăn bánh?",
+                   "Các quán bánh ngon?"
+              ],
+              "responses": [
+                   "Bạn có thể thử bánh bao ở bách khoa",
+                   "Bánh chuối chiên ở bách khoa sẽ rất ngon vào ngày trời lạnh",
+                   "Bánh gạo cay Hàn Quốc ở Hangsarang bạch mai tuyệt lắm.",
+                   "Bánh xèo bách khoa ăn buổi chiều sẽ rất tuyệt."
+              ],
+              "context": [
+                   ""
+              ]
+         },
+         {
+              "tag": "Ok",
+              "patterns": [
+                   "Ok",
+                   "Được cảm ơn bot"
+              ],
+              "responses": [
+                   "Bạn có muốn Bot tư vấn thêm cho bạn không?"
+              ],
+              "context": [
+                   ""
+              ]
+         },
+         {
+              "tag": "Đói",
+              "patterns": [
+                   "Mình đói quá",
+                   "Mình đói nhưng không biết ăn gì?"
+              ],
+              "responses": [
+                   "Bạn có thể đi ăn ngoài mình sẽ tư vấn cho bạn"
+              ],
+              "context": [
+                   ""
+              ]
+         },
+         {
+              "tag": "Tuổi",
+              "patterns": [
+                   "Bạn bao nhiêu tuổi?",
+                   "Bạn ra đời được bao lâu rồi?"
+              ],
+              "responses": [
+                   "Mình được sinh ra từ khi project AI ngày nào không biết. "
+              ],
+              "context": [
+                   ""
+              ]
+         },
+         {
+              "tag": "Ngoại ngữ",
+              "patterns": [
+                   "Bạn có thể nói được tiếng anh không?",
+                   "Do you speak English?"
+              ],
+              "responses": [
+                   "Xin lỗi mình chỉ mới có thể nói tiếng việt."
+              ],
+              "context": [
+                   ""
+              ]
+         },
+         
+         {
+              "tag": "Nhà",
+              "patterns": [
+                   "Nhà bạn ở đâu?",
+                   "Bạn có nhà không?"
+              ],
+              "responses": [
+                   "Mình ở trong tâm trí bạn bất cứ lúc nào bạn cần mình."
+              ],
+              "context": [
+                   ""
+              ]
+         },
+         
+         {
+              "tag": "Hỏi ngược lại",
+              "patterns": [
+                   "Bạn hỏi mình đi?",
+                   "Bạn có câu hỏi cho mình không?"
+              ],
+              "responses": [
+                   "Bạn có đói không?",
+                   "Bạn ăn cơm chưa?",
+                   "Bạn tên gì?",
+                   "Bạn có người yêu chưa?"
+              ],
+              "context": [
+                   ""
+              ]
+         },
+         {
+              "tag": "Làm quen",
+              "patterns": [
+                   "Mình tên là",
+                   "Tên của mình là"
+              ],
+              "responses": [
+                   "Mình rất vui khi được tư vấn cho bạn. Bạn cần mình tư vấn về điều gì?"
+              ],
+              "context": [
+                   ""
+              ]
+         },
+         {
+              "tag": "Than thở",
+              "patterns": [
+                   "Mình đang chán quá bot ơi",
+                   "Mình buồn quá",
+                   "Mình không biết làm gì?"
+              ],
+              "responses": [
+                   "Bạn có thể nhấc mông dậy đi ăn, Bot sẽ tư vấn cho bạn."
+              ],
+              "context": [
+                   ""
+              ]
+         },
+         {
+              "tag": "tạm biệt",
+              "patterns": [
+                   "Tạm biệt",
+                   "Bye",
+                   "vậy nha"
+              ],
+              "responses": [
+                   "Cảm ơn bạn, nhớ quay lại nhé!",
+                   "FoodBot mãi keo bạn hì hì."
+              ],
+              "context": [
+                   ""
+              ]
+         }
+    ]
+}
