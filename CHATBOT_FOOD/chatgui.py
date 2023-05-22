@@ -7,7 +7,10 @@ from keras.models import load_model
 model = load_model('chatbot_model.h5')
 import json
 import random
-intents = json.loads(open('D:\Project2_ChatBot_Food\CHATBOT_FOOD\intents.json', encoding='utf-8').read())
+import os
+cur_dir = os.getcwd() + '\CHATBOT_FOOD'
+print(cur_dir)
+intents = json.loads(open(cur_dir+'\intents.json', encoding='utf-8').read())
 words = pickle.load(open('words.pkl','rb'))
 classes = pickle.load(open('classes.pkl','rb'))
 
