@@ -1,6 +1,6 @@
 import nltk
-nltk.download('wordnet')
-nltk.download('punkt')
+# nltk.download('wordnet')
+# nltk.download('punkt')
 from nltk.stem import WordNetLemmatizer
 lemmatizer = WordNetLemmatizer()
 import json
@@ -11,12 +11,16 @@ from keras.models import Sequential
 from keras.layers import Dense, Activation, Dropout
 from keras.optimizers import SGD
 import random
+import os
+
+cur_dir = os.getcwd() + '\CHATBOT_FOOD'
+
 
 words=[]
 classes = []
 documents = []
 ignore_words = ['?', '!']
-data_file = open('D:\Project2_ChatBot_Food\CHATBOT_FOOD\intents.json', encoding='utf-8').read()
+data_file = open(cur_dir + '\intents.json', encoding='utf-8').read()
 intents = json.loads(data_file)
 
 

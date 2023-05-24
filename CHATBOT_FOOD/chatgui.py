@@ -8,6 +8,7 @@ model = load_model('chatbot_model.h5')
 import json
 import random
 import os
+
 cur_dir = os.getcwd() + '\CHATBOT_FOOD'
 print(cur_dir)
 intents = json.loads(open(cur_dir+'\intents.json', encoding='utf-8').read())
@@ -52,7 +53,7 @@ def getResponse(ints, intents_json):
     tag = ints[0]['intent']
     list_of_intents = intents_json['intents']
     for i in list_of_intents:
-        if(i['tag']== tag):
+        if(i['tag'] == tag):
             result = random.choice(i['responses'])
             break
     return result

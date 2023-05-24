@@ -364,6 +364,21 @@
               "context": [
                    ""
               ]
+         },
+         {
+               "tag": "Bad bye",
+               "patterns":[
+                    "Cút",
+                    "cút",
+                    "Địt mẹ mày",
+                    "Fuck"
+               ],
+               "responses":[
+                    "Bạn đừng mắng mình, hẹn gặp lại bạn sau"
+               ],
+               "context": [
+                    ""
+               ]
          }
     ]
 }
