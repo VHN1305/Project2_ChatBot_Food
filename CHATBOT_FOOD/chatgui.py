@@ -107,6 +107,7 @@ SendButton = Button(base, font=("Verdana",12,'bold'), text="Send", width="12", h
 #Create the box to enter message
 EntryBox = Text(base, bd=0, bg="white",width="29", height="5", font="Arial")
 #EntryBox.bind("<Return>", send)
+EntryBox.bind("<Return>", lambda event: send())
 
 
 #Place all components on the screen

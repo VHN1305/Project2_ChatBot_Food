@@ -355,11 +355,11 @@
               "patterns": [
                    "Tạm biệt",
                    "Bye",
-                   "vậy nha"
+                   "vậy nha",
+                   "không"
               ],
               "responses": [
-                   "Cảm ơn bạn, nhớ quay lại nhé!",
-                   "FoodBot mãi keo bạn hì hì."
+                   "Cảm ơn bạn, nhớ quay lại nhé!"
               ],
               "context": [
                    ""
