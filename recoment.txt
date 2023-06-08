@@ -1,0 +1,8 @@
+Sửa input, output động hơn
+
+Xây dựng 1 csdl động hơn
+
+tìm hiểu về tính năng của underthe sea
+
+
+xây dựng csdl để phân loại đồ ăn
