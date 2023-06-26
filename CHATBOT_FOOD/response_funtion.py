@@ -16,7 +16,7 @@ def model_predict(Buoi = 'Sáng', Cam_xuc = 'Vui', Do_tuoi = 10, So_nguoi = 1, T
     Che_do_an = Che_do_an.lower()
     Dac_biet = Dac_biet.lower()
     Do_pho_bien = Do_pho_bien.lower()
-
+     
     if Buoi == 'sáng':
         Buoi = 0
     elif Buoi == 'trưa':
