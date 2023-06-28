@@ -378,6 +378,123 @@
                "context": [
                     ""
                ]
-         }
+         },
+         {
+               "tag": "kết quả",
+               "patterns":[
+                    "Vậy kết quả của món ăn của tôi như thế nào",
+                    "Hãy cho tôi kết quả của tôi",
+                    "Bạn cho tôi món ăn nào",
+                    "Bạn sẽ mang món ăn nào đến cho tôi đây",
+                    "Hãy đi ăn nào"
+               ],
+               "responses":[
+                    ""
+               ],
+               "context": [
+                    ""
+               ]
+          },
+          {
+               "tag": "cụ thể",
+               "patterns":[
+                    "Vậy cụ thể là như thế nào",
+                    "Hãy cho tôi kết quả cụ thể",
+                    "Bạn cho tôi cụ thể"
+               ],
+               "responses":[
+                    ""
+               ],
+               "context": [
+                    ""
+               ]
+          },
+          {
+               "tag": "món nước",
+               "patterns":[
+                    "Vậy cụ thể món nước là như thế nào",
+                    "Hãy cho tôi kết quả cụ thể về món nước",
+                    "Bạn cho tôi món nước mà bạn muốn nói đến"
+               ],
+               "responses":[
+                    "Bạn hãy thở Phở đi",
+                    "Bạn thử Bún Bò Huế chưa",
+                    "Bạn thử Bún riêu cua đi",
+                    "Hãy thử Bún Bung, hoặc bún mọc sườn nhé",
+                    "Miến ngan không phải 1 lựa chọn tồi"
+               ],
+               "context": [
+                    ""
+               ]
+          },
+          {
+               "tag": "món lạnh",
+               "patterns":[
+                    "Thời tiết thật là nóng",
+                    "Hãy cho tôi kết quả cụ thể",
+                    "Bạn cho tôi cụ thể"
+               ],
+               "responses":[
+                    "Kem là 1 lựa chọn không tồi",
+                    "Siro đá bào, bạn thử món này chưa",
+                    "Nước ngọt bạn ơi",
+                    "Bia hơi nhá",
+                    "Trà sữa nha"
+               ],
+               "context": [
+                    ""
+               ]
+          },
+          {
+               "tag": "món tráng miệng",
+               "patterns":[
+                    "ăn xong rồi phải tráng miệng",
+                    "ăn gì cho đỡ ngấy",
+                    "Bánh",
+                    "Hãy cho tôi một món tráng miệng nhé",
+                    "Bạn cho tôi một món tráng miệng cụ thể"
+               ],
+               "responses":[
+                    "Món chè trái cây ngõ tự do vừa mát vừa ngon",
+                    "Yaourt trái cây ngũ cốc ở bách khoa rất ngon đấy!",
+                    "Kem chuối trái cây sữa chua giúp thanh mát vào mùa hè",
+                    "Kem ở phố tràng tiền ngon lắm"
+               ],
+               "context": [
+                    ""
+               ]
+          },
+          {
+               "tag": "đồ ăn vặt",
+               "patterns":[
+                    "Ăn vặt có gì ngon",
+                    "Hãy cho tôi một món ăn vặt đi",
+                    "Bạn cho một món ăn vặ tôi cụ thể"
+               ],
+               "responses":[
+                    "Hãy thử xiên bẩn nhé",
+                    "Bánh mì Hà Nội là 1 lựa chọn không tồi",
+                    "Vào một cửa hàng nào đó mua bim bim thì sao"
+               ],
+               "context": [
+                    ""
+               ]
+          },
+          {
+               "tag": "Món cho trẻ em",
+               "patterns":[
+                    "Trẻ em",
+                    "Trẻ nhỏ",
+                    "Trẻ trâu"
+               ],
+               "responses":[
+                    "Bạn thử cháo dinh dưỡng chưa",
+                    "Hãy thử sữa tươi nhé",
+                    "Trẻ em ăn thêm tôm cua bổ xung canxi tốt cho sức khỏe"
+               ],
+               "context": [
+                    ""
+               ]
+          }
     ]
 }

@@ -112,5 +112,3 @@ def load_predict(model_predict_result):
         return 'Món cho trẻ em'
     else:
         return 'bánh tráng trộn'
-
-print(load_predict(model_predict(Buoi='Trưa', Cam_xuc='Buồn')))
