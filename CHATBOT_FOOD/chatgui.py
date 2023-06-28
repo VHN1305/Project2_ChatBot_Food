@@ -11,6 +11,7 @@ loaded_model_tree = pickle.load(open(file_name, "rb"))
 import json
 import random
 import os
+
 # from response_funtion import model_predict, load_predict
 
 
@@ -93,7 +94,7 @@ class Chat:
         return result
 
     def chatbot_response(self, msg):
-        self.welcome()
+
         ints = self.predict_class(msg, model)
         res = self.getResponse(ints, intents)
         return res
@@ -108,6 +109,10 @@ from tkinter import *
 def send():
     msg = EntryBox.get("1.0",'end-1c').strip()
     EntryBox.delete("0.0",END)
+    '''
+    Dùng chỗ này để gọi welcome là hợp lý anh ơi
+
+    '''
 
     if msg != '':
         ChatLog.config(state=NORMAL)

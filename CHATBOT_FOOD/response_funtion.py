@@ -113,3 +113,4 @@ def load_predict(model_predict_result):
     else:
         return 'bánh tráng trộn'
 
+print(load_predict(model_predict(Buoi='Trưa', Cam_xuc='Buồn')))
