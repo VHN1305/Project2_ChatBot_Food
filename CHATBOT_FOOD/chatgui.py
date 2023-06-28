@@ -5,9 +5,15 @@ import pickle
 import numpy as np
 from keras.models import load_model
 model = load_model('chatbot_model.h5')
+file_name = 'embedding_model.h5'
+loaded_model_tree = pickle.load(open(file_name, "rb"))
+
 import json
 import random
 import os
+# from response_funtion import model_predict, load_predict
+
+
 
 cur_dir = os.getcwd() + '\CHATBOT_FOOD'
 print(cur_dir)
@@ -15,54 +21,84 @@ intents = json.loads(open(cur_dir+'\intents.json', encoding='utf-8').read())
 words = pickle.load(open('words.pkl','rb'))
 classes = pickle.load(open('classes.pkl','rb'))
 
+class Chat:
+    def __init__(self):
+        self.name = ''
+        self.Buoi = 'Sáng'
+        self.Camxuc = 'Vui'
+        self.Do_tuoi = 10
+        self.So_nguoi = 5
+        self.Thoi_tiet = 'Mát'
+        self.Phong_cach_am_thuc = 'Việt Nam'
+        self.Loai_hinh_quan_an = 'Nhà Hàng Sang Trọng'
+        self.Che_do_an = 'ăn thoải mái'
+        self.Dac_biet = 'Có chỗ để xe'
+        self.Do_pho_bien = 'hot trend'
+        
 
-def clean_up_sentence(sentence):
-    # tokenize the pattern 
-    sentence_words = nltk.word_tokenize(sentence)
-    # stem each word 
-    sentence_words = [lemmatizer.lemmatize(word.lower()) for word in sentence_words]
-    return sentence_words
+    def welcome(self):
+        self.name = input('Cho tôi biết tên của bạn để dễ giao tiếp hơn')
+        self.Buoi = input('Trước tiên hãy cung cấp cho chúng tôi bạn đang ở buổi nào trong ngày (Sáng, Trưa, Chiều, Tối, Đêm)')
+        self.Do_tuoi = input('Vậy bạn bao nhiêu tuổi')
+        self.Camxuc = input('Vậy cảm xúc của bạn đang như thế nào')
+        self.So_nguoi = input('Có tất cả bao nhiêu người đi ăn vậy')
+        self.Thoi_tiet = input('Thời tiết ở chỗ bạn như thế nào')
+        self.Phong_cach_am_thuc = input('Bạn muốn ăn phong cách ẩm thực nào')
+        self.Loai_hinh_quan_an = input('Vậy còn loại hình quán ăn mà bạn muốn ăn')
+        self.Che_do_an = input('Chế độ ăn của bạn như thế nào')
+        self.Dac_biet = input('Bạn có yêu cầu đặc biệt gì không?, ví dụ như có chỗ để xe')
+        self.Do_pho_bien = input('Bạn muốn độ phổ biến của món ăn như thế nào')
+        
 
-# return bag of words array: 0 or 1 for each word in the bag that exists in the sentence
+    def clean_up_sentence(self, sentence):
+        # tokenize the pattern 
+        sentence_words = nltk.word_tokenize(sentence)
+        # stem each word 
+        sentence_words = [lemmatizer.lemmatize(word.lower()) for word in sentence_words]
+        return sentence_words
 
-def bow(sentence, words, show_details=True):
-    sentence_words = clean_up_sentence(sentence)
-    # bag of words - matrix of N words, vocabulary matrix
-    bag = [0]*len(words)  
-    for s in sentence_words:
-        for i,w in enumerate(words):
-            if w == s: 
-                # assign 1 if current word is in the vocabulary position
-                bag[i] = 1
-                if show_details:
-                    print ("found in bag: %s" % w)
-    return(np.array(bag))
+    # return bag of words array: 0 or 1 for each word in the bag that exists in the sentence
 
-def predict_class(sentence, model):
-    p = bow(sentence, words,show_details=False)
-    res = model.predict(np.array([p]))[0]
-    ERROR_THRESHOLD = 0.25
-    results = [[i,r] for i,r in enumerate(res) if r>ERROR_THRESHOLD]
-    results.sort(key=lambda x: x[1], reverse=True)
-    return_list = []
-    for r in results:
-        return_list.append({"intent": classes[r[0]], "probability": str(r[1])})
-    return return_list
+    def bow(self, sentence, words, show_details=True):
+        sentence_words = self.clean_up_sentence(sentence)
+        # bag of words - matrix of N words, vocabulary matrix
+        bag = [0]*len(words)  
+        for s in sentence_words:
+            for i,w in enumerate(words):
+                if w == s: 
+                    # assign 1 if current word is in the vocabulary position
+                    bag[i] = 1
+                    if show_details:
+                        print ("found in bag: %s" % w)
+        return(np.array(bag))
 
-def getResponse(ints, intents_json):
-    tag = ints[0]['intent']
-    list_of_intents = intents_json['intents']
-    for i in list_of_intents:
-        if(i['tag'] == tag):
-            result = random.choice(i['responses'])
-            break
-    return result
+    def predict_class(self, sentence, model):
+        p = self.bow(sentence, words,show_details=False)
+        res = model.predict(np.array([p]))[0]
+        ERROR_THRESHOLD = 0.25
+        results = [[i,r] for i,r in enumerate(res) if r>ERROR_THRESHOLD]
+        results.sort(key=lambda x: x[1], reverse=True)
+        return_list = []
+        for r in results:
+            return_list.append({"intent": classes[r[0]], "probability": str(r[1])})
+        return return_list
 
-def chatbot_response(msg):
-    ints = predict_class(msg, model)
-    res = getResponse(ints, intents)
-    return res
+    def getResponse(self, ints, intents_json):
+        tag = ints[0]['intent']
+        list_of_intents = intents_json['intents']
+        for i in list_of_intents:
+            if(i['tag'] == tag):
+                result = random.choice(i['responses'])
+                break
+        return result
 
+    def chatbot_response(self, msg):
+        self.welcome()
+        ints = self.predict_class(msg, model)
+        res = self.getResponse(ints, intents)
+        return res
+
+chat = Chat()
 
 #Creating GUI with tkinter
 import tkinter
@@ -78,7 +114,7 @@ def send():
         ChatLog.insert(END, "You: " + msg + '\n\n')
         ChatLog.config(foreground="#000000", font=("Verdana", 12 ))
     
-        res = chatbot_response(msg)
+        res = chat.chatbot_response(msg)
         ChatLog.insert(END, "Bot: " + res + '\n\n')
             
         ChatLog.config(state=DISABLED)

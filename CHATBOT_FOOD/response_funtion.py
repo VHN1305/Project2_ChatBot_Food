@@ -1,7 +1,7 @@
 
 import pickle
 
-file_name = 'embedding_model.pickle'
+file_name = 'embedding_model.h5'
 loaded_model = pickle.load(open(file_name, "rb"))
 
 def model_predict(Buoi = 'Sáng', Cam_xuc = 'Vui', Do_tuoi = 10, So_nguoi = 1, Thoi_tiet = 'Mát',
@@ -112,8 +112,4 @@ def load_predict(model_predict_result):
         return 'Món cho trẻ em'
     else:
         return 'bánh tráng trộn'
-
-print(load_predict(model_predict()))
-
-
 
